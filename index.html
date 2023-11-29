@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Random Number Generator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #result {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #4285F4;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Google Random Number Generator</h1>
+    
+    <div id="result">Click the button to generate a random number</div>
+    
+    <button onclick="generateRandomNumber()">Generate Random Number</button>
+
+    <script>
+        function generateRandomNumber() {
+
+            var min = 1;
+            var max = 100;
+
+            var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+        
+            document.getElementById("result").innerHTML = "Random Number: " + randomNumber;
+        }
+    </script>
+
+</body>
+</html>
